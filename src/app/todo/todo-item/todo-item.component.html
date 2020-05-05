@@ -1,0 +1,9 @@
+<div   *ngFor="let item of items; let ind = index" class="item-inner">
+  <span >{{item}}</span>
+  <div class="items-btn">
+  <button class="btn" (click)="edit(ind)">edit</button>
+  <button class="btn" (click)="delete(ind)">delete</button>
+    <input type="text" [(ngModel)]="eddd" >
+  </div>
+</div>
+

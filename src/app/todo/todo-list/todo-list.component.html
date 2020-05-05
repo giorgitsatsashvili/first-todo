@@ -1,0 +1,11 @@
+
+<div class="container">
+  <div class="list-header">
+    <h1>todo-list</h1>
+    <div class="add">
+      <input type="text" [(ngModel)]="new" placeholder="add something" >
+      <button class="btn" (click)="add()">Add</button>
+    </div>
+  </div>
+  <app-todo-item   [items]="todoArray"></app-todo-item>
+</div>

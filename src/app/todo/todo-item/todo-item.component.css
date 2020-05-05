@@ -1,0 +1,21 @@
+.item-inner {
+  border: 1px solid #373e57;;
+  height: 100px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  margin-left: 15px;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: rgb(29, 161, 242);;
+  outline: none;
+  transition: background-color .1s;
+  color: white;
+}
