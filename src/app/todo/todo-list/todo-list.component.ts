@@ -8,16 +8,28 @@ import {Item} from "../../models/item";
 })
 export class TodoListComponent implements OnInit {
 todoArray = [];
-new = '';
+  val;
   constructor() { }
 
   ngOnInit() {
   }
 
-  add() {
-    if (this.new !== '') {
-      this.todoArray.push(this.new);
+  add(value) {
+    if (value !== '') {
+      this.todoArray.push(value);
     }
   }
 
+  delete (i) {
+    this.todoArray.splice(i,1)
+  }
+
+
+edit (event,i) {
+    this.val = event;
+    this.todoArray.splice(i,1,this.val)
 }
+
+}
+
+

@@ -3,9 +3,9 @@
   <div class="list-header">
     <h1>todo-list</h1>
     <div class="add">
-      <input type="text" [(ngModel)]="new" placeholder="add something" >
-      <button class="btn" (click)="add()">Add</button>
+      <input type="text" #name placeholder="add something" >
+      <button class="btn" (click)="add(name.value)">Add</button>
     </div>
   </div>
-  <app-todo-item   [items]="todoArray"></app-todo-item>
+  <app-todo-item (editt)="edit($event,i)"  (test)="delete(i)" *ngFor="let oneItem of todoArray; let i = index"  [item]="oneItem"></app-todo-item>
 </div>
